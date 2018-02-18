@@ -26,3 +26,25 @@
     (square_sum (+ a 1) (* a 2)))
 (print (square_sum 1 2))
 (print (f 5))
+
+; 条件式
+(define (abs x)
+    (cond ((> x 0) x)
+          ((= x 0) 0)
+          ((< x 0) (-x))))
+
+; こうも書ける
+(define (abs_ x)
+    (cond ((< x 0) (- x))
+                  (else x)))
+
+(print (abs_ -5))
+
+; elseをなくすこともできる => if文の利用
+(define (abs__ x)
+    (if (< x 0)
+        (- x)
+        x))
+(print (abs__ -10))
+
+(print (+ 5 3 5))
